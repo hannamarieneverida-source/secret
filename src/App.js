@@ -4,7 +4,7 @@ import "./App.css";
 export default function App() {
   const [step, setStep] = useState(0);
 
-  const emojis = ["🎉", "🎊", "✨", "🎈", "💖"];
+  const emojis = ["🎉", "🎊", "✨", "🎈", "💖", "happy", "birthday"];
 
   return (
     <div className="container">
@@ -65,7 +65,7 @@ export default function App() {
 
 
           <h1 className="birthday">
-            🎉 Happy Birthday! 🎂
+            🎉 Happy Birthday, CJ! 🎂
           </h1>
 
 
