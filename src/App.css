@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sorry {
+  font-size: 6rem;
+  color: #92569b;
+  text-shadow:
+    0 0 10px #92569b,
+    0 0 20px #92569b,
+    0 0 40px #92569b,
+    0 0 80px #92569b;
+  animation: glow 2s ease-in-out infinite alternate,
+             fadeIn 2s ease;
+}
+
+@keyframes glow {
+  from {
+    transform: scale(1);
+    text-shadow:
+    0 0 10px #92569b,
+    0 0 20px #92569b,
+    0 0 40px #92569b;
+  }
+  to {
+    transform: scale(1.1);
+    text-shadow:
+    0 0 20px #92569b,
+    0 0 40px #92569b,
+    0 0 80px #92569b,
+    0 0 120px #92569b;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+}
+/* Button */
+.btn {
+  padding: 15px 35px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50px;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px #ff4d6d;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px #ff4d6d;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
