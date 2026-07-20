@@ -79,12 +79,6 @@ body{
   box-shadow:0 15px 35px rgba(255,77,109,.6);
 }
 
-.message{
-  color:white;
-  font-size:1.2rem;
-  line-height:1.8;
-  animation:fadeUp 1.5s ease;
-}
 
 /* ---------- Confetti ---------- */
 
@@ -202,4 +196,10 @@ height:320px;
 width:90%;
 }
 
+}
+.intro{
+  color:white;
+  font-size:2rem;
+  margin-bottom:30px;
+  text-shadow:0 0 15px #ff4d6d;
 }

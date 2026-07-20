@@ -2,21 +2,54 @@ import { useState } from "react";
 import "./App.css";
 
 export default function App() {
-  const [show, setShow] = useState(false);
+  const [step, setStep] = useState(0);
 
-  const emojis = ["🎉", "🎊", "✨", "🎈", "💖", "🌟"];
+  const emojis = ["🎉", "🎊", "✨", "🎈", "💖"];
 
   return (
     <div className="container">
-      {!show ? (
-        <button className="btn" onClick={() => setShow(true)}>
-          🎁 Click Me
-        </button>
-      ) : (
+
+      {step === 0 && (
         <>
-          {/* Confetti */}
+
+          <button className="btn" onClick={() => setStep(1)}>
+            🎁 Click Me
+          </button>
+        </>
+      )}
+
+
+      {step === 1 && (
+        <>
+          <h2 className="intro">
+            One more click... 😊
+          </h2>
+
+          <button className="btn" onClick={() => setStep(2)}>
+            💖 Continue
+          </button>
+        </>
+      )}
+
+
+      {step === 2 && (
+        <>
+          <h2 className="intro">
+            Are you ready? 🎂
+          </h2>
+
+          <button className="btn" onClick={() => setStep(3)}>
+            🎉 Open Surprise
+          </button>
+        </>
+      )}
+
+
+      {step === 3 && (
+        <>
+
           <div className="confetti">
-            {[...Array(60)].map((_, i) => (
+            {[...Array(50)].map((_, i) => (
               <span
                 key={i}
                 style={{
@@ -30,28 +63,27 @@ export default function App() {
             ))}
           </div>
 
-          <h1 className="birthday">🎉 Happy Birthday! 🎂</h1>
+
+          <h1 className="birthday">
+            🎉 Happy Birthday! 🎂
+          </h1>
+
 
           <div className="gallery">
-            <img src="/image/1.jpg" alt="1" />
-            <img src="/image/2.jpg" alt="2" />
-            <img src="/image/3.jpg" alt="3" />
-            <img src="/image/4.jpg" alt="4" />
-            <img src="/image/5.jpg" alt="5" />
-            <img src="/image/6.jpg" alt="6" />
+            <img src="/image/1.jpg" alt="1"/>
+            <img src="/image/2.jpg" alt="2"/>
+            <img src="/image/3.jpg" alt="3"/>
+            <img src="/image/4.jpg" alt="4"/>
+            <img src="/image/5.jpg" alt="5"/>
+            <img src="/image/6.jpg" alt="6"/>
           </div>
 
-          <p className="message">
-            Happy Birthday! 🎂
-            <br />
-            Hope today brings you lots of smiles,
-            <br />
-            laughter, and wonderful memories.
-            <br />
-            Enjoy your special day! 🎉
-          </p>
+
+          
+
         </>
       )}
+
     </div>
   );
 }
